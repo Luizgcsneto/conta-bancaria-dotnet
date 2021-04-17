@@ -49,7 +49,14 @@ namespace DIO.Bank
 
         private static void Sacar()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Informe o número da conta que você vai sacar");
+            int indiceConta = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Informe o valor que você vai sacar");
+            double valorSaque = double.Parse(Console.ReadLine());
+
+            listaContas[indiceConta].Sacar(valorSaque);
+
         }
 
         private static void Transferir()
