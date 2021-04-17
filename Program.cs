@@ -21,19 +21,18 @@ namespace DIO.Bank
                     InserirNovaConta();
                     break;
                     case "3":
-                  //  Transferir();
+                    Transferir();
                     break;
                     case "4":
-                   // Sacar();
+                    Sacar();
                     break;
                     case "5":
-                  //  Depositar();
+                    Depositar();
                     break;
                     case "C":
                     Console.Clear();
                     break;
                     case "X":
-
                     default:
                     throw new ArgumentOutOfRangeException();
                 }
@@ -41,7 +40,21 @@ namespace DIO.Bank
             }
              Console.WriteLine("Obrigado por usar nossos serviços");
              Console.WriteLine();
+        }
 
+        private static void Depositar()
+        {
+            throw new NotImplementedException();
+        }
+
+        private static void Sacar()
+        {
+            throw new NotImplementedException();
+        }
+
+        private static void Transferir()
+        {
+            throw new NotImplementedException();
         }
 
         private static void ListarContas()
@@ -56,8 +69,8 @@ namespace DIO.Bank
           for(int i = 0; i < listaContas.Count; i++)
           {
               Conta conta = listaContas[i];
-              Console.WriteLine("#{0}", i);
-              Console.WriteLine(conta);
+              Console.WriteLine($"#{i} - {conta}");
+            
           }
         }
 
