@@ -1,4 +1,4 @@
-
+using System;
 namespace DIO.Bank
 {
     public class Conta
@@ -14,6 +14,18 @@ namespace DIO.Bank
             this.Nome = nome;
             this.Credito = credito;
             this.Saldo = saldo;
+        }
+
+        public bool Sacar(double valorSaque)
+        {
+            if(this.Saldo - valorSaque < (this.Credito * -1))
+            {
+                Console.WriteLine("Saldo insuficiente1");
+                return false;
+            }
+
+            this.Saldo -= valorSaque;
+            Console.WriteLine($"Saldo atual da conta está em {this.Saldo}");
         }
     }
 }
