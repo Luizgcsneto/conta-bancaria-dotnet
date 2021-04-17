@@ -44,7 +44,13 @@ namespace DIO.Bank
 
         private static void Depositar()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Informe o número da conta que você vai depositar");
+            int indiceConta = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Informe o valor que você vai depositar");
+            double valorDeposito = double.Parse(Console.ReadLine());
+
+            listaContas[indiceConta].Depositar(valorDeposito);
         }
 
         private static void Sacar()
