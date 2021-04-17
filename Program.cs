@@ -67,7 +67,16 @@ namespace DIO.Bank
 
         private static void Transferir()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Informe o número da conta de origem");
+            int indiceContaOrigem = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Informe o número da conta de destino");
+            int indiceContaDestino = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Informe o valor que você vai ser transferido");
+            double valorTransferencia = double.Parse(Console.ReadLine());
+
+            listaContas[indiceContaOrigem].Transferir(valorTransferencia, listaContas[indiceContaDestino]);
         }
 
         private static void ListarContas()
